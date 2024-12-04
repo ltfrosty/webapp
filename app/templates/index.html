@@ -1,0 +1,162 @@
+<html>
+    <head>
+        <title>{{title}}</title>
+        <script type = "text/javascript">
+            if (!("/x".includes(document.location.toString().slice(-1)))) document.location += "/"
+        </script>
+        <script type="module">import * as library from './static/__target__/library.js'; window.library = library;</script>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f0f0f0;
+            }
+            h1 {
+                text-align: center;
+                margin-top: 30px;
+            }
+            h2 {
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .form-container {
+                margin: 0 auto;
+                width: 50%;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 10px;
+               
+            }
+
+            label {
+                display: block;
+                margin-top: 10px;
+                margin-bottom: 5px;
+            }
+            input {
+                width: 100%;
+                padding: 5px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            select {
+                width: 100%;
+                padding: 5px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            button {
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background-color: #007bff;
+                color: #fff;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #0056b3;
+            }
+            u {
+                font-size: 20px;
+            }
+
+            .slider-container {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+            .slider-container span {
+                margin: 0 5px;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <h1>Welcome to {{title}}</h1>
+        
+        <h2>
+        	This basic web app predicts rice yield based on several factors.
+        </h2>
+        
+
+        <div class="form-container">
+            <label for="country">Country:</label>
+            <select name="country" id="country" onchange="library.dd_onchange()">
+                <option value="india">India</option>
+                <option value="china">China</option>
+                <option value="thailand">Thailand</option>
+                <option value="vietnam">Vietnam</option>
+                <option value="combined">Combined</option>
+            </select><br><br>
+
+            <label for="energy_use">Energy Use (TJ per 1000ha):</label>
+            <input type="text" id="energy_use" name="energy_use" class="text_input" value="0" oninput="library.on_input('energy_use','energy_slider')">
+            <div class="slider-container">
+                <span id="energy_min">0</span>
+                <input type="range" min="0" max="100" value="0" class="slider" id="energy_slider" oninput="library.on_sliderchange('energy_slider', 'energy_use')">
+                <span id="energy_max">100</span>
+            </div> 
+
+            <label for="fertilizer_use">Fertilizer Use (kg per ha of crop land):</label>
+            <input type="text" id="fertilizer_use" name="fertilizer_use" class="text_input" value="0" oninput="library.on_input('fertilizer_use','fertilizer_slider')">
+            <div class="slider-container">
+                <span id="fertilizer_min">0</span>
+                <input type="range" min="0" max="500" value="0" class="slider" id="fertilizer_slider" oninput="library.on_sliderchange('fertilizer_slider', 'fertilizer_use')">
+                <span id="fertilizer_max">500</span>
+            </div> 
+
+            <label for="water_use">Water Use (m³ per t of yield):</label>
+            <input type="text" id="water_use" name="water_use" class="text_input" value="0" oninput="library.on_input('water_use','water_slider')">
+            <div class="slider-container">
+                <span id="water_min">0</span>
+                <input type="range" min="0" max="5000" value="0" class="slider" id="water_slider" oninput="library.on_sliderchange('water_slider', 'water_use')">
+                <span id="water_max">5000</span>
+            </div> 
+            
+            <label for="pesticide_use">Pesticide Use (kg/ha):</label>
+            <input type="text" id="pesticide_use" name="pesticide_use" class="text_input" value="0" oninput="library.on_input('pesticide_use','pesticide_slider')">
+            <div class="slider-container">
+                <span id="pesticide_min">0</span>
+                <input type="range" min="0" max="50" value="0" class="slider" id="pesticide_slider" oninput="library.on_sliderchange('pesticide_slider', 'pesticide_use')">
+                <span id="pesticide_max">50</span>
+            </div> 
+            
+            <label for="rural_pop">Rural Population over Total Population (%):</label>
+            <input type="text" id="rural_pop" name="rural_pop" class="text_input" value="0" oninput="library.on_input('rural_pop','rural_pop_slider')">
+            <div class="slider-container">
+                <span id="rural_pop_min">0</span>
+                <input type="range" min="0" max="100" value="0" class="slider" id="rural_pop_slider" oninput="library.on_sliderchange('rural_pop_slider', 'rural_pop')">
+                <span id="rural_pop_max">100</span>
+            </div> 
+
+            <label for="pesticide_import">Pesticide Imports (tonnes):</label>
+            <input type="text" id="pesticide_import" name="pesticide_import" class="text_input" value="0" oninput="library.on_input('pesticide_import','pesticide_import_slider')">
+            <div class="slider-container">
+                <span id="pesticide_import_min">0</span>
+                <input type="range" min="0" max="50" value="0" class="slider" id="pesticide_import_slider" oninput="library.on_sliderchange('pesticide_import_slider', 'pesticide_import')">
+                <span id="pesticide_import_max">50</span>
+            </div> 
+
+            <label for="nad">Nitrogen Air Deposition (kg/ha):</label>
+            <input type="text" id="nad" name="nad" class="text_input" value="0" oninput="library.on_input('nad','nad_slider')">
+            <div class="slider-container">
+                <span id="nad_min">0</span>
+                <input type="range" min="0" max="50" value="0" class="slider" id="nad_slider" oninput="library.on_sliderchange('nad_slider', 'nad')">
+                <span id="nad_max">50</span>
+            </div> 
+
+
+            <button onclick="library.predict_yield()">Predict</button><br><br>
+
+            <label>Predicted yield: </label>
+            <u id="predicted"></u>
+            
+        </div>
+        <br><br><br><br>
+    </body>
+</html>
