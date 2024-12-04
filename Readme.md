@@ -1,7 +1,7 @@
 # Rice Yield Predictor Web App
 This project is a web application that predicts agricultural yield based on various input parameters such as energy use, water use, fertilizer use, pesticide use, rural population, and pesticide imports.
 
-# Project Structure
+## Project Structure
 __pycache__/
 .ebextensions/
     miniproject1.config
@@ -30,33 +30,33 @@ Pipfile
 Pipfile.lock
 runflaskvoc.sh
 
-# Step-by-Step Installation  
+## Step-by-Step Installation  
 
-## Clone the Repository  
+### Clone the Repository  
 
 1. Open your terminal or Git Bash.  
-2. Navigate to the folder where you want to store the project:  
-   ```bash  
-   cd Downloads  
-   ```  
+
+2. Navigate to the folder where you want to store the project
+
 3. Clone the repository:  
    ```bash  
-   git clone https://github.com/Data-Driven-World/d2w_mini_projects  
+   git clone https://github.com/ltfrosty/webapp.git  
    ```  
 
-## Navigate to the Project Directory  
+### Navigate to the Project Directory  
+1. Navigate to where you git cloned the repository
 
-1. Go to the folder for this project:  
+2. Go into the folder for this project:  
    - Windows:  
      ```bash  
-     cd d2w_mini_projects\mp_sort  
+     cd webapp  
      ```  
    - Unix/MacOS:  
      ```bash  
-     cd d2w_mini_projects/mp_sort  
+     cd webapp 
      ```  
 
-## Set Up a Virtual Environment  
+### Set Up a Virtual Environment  
 
 1. Ensure **pipenv** is installed:  
    ```bash  
@@ -71,7 +71,7 @@ runflaskvoc.sh
    pipenv shell  
    ```  
 
-## Run the Web App  
+### Run the Web App  
 
 1. Navigate to the root folder:  
    ```bash  
@@ -83,13 +83,13 @@ runflaskvoc.sh
    ```  
 3. Open a browser and go to `http://127.0.0.1:5000/` to access the app. 
 
-# Usage
+## Usage
 
 1. Navigate to the web application.
 2. Input the required parameters such as energy use, water use, fertilizer use, pesticide use, rural population, and pesticide imports.
 3. Click the "Predict" button to get the predicted rice yield.
 
-# License
+## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
     
