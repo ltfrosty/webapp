@@ -1,35 +1,6 @@
 # Rice Yield Predictor Web App
 This project is a web application that predicts agricultural yield based on various input parameters such as energy use, water use, fertilizer use, pesticide use, rural population, and pesticide imports.
 
-## Project Structure
-__pycache__/\
-.ebextensions/\
-    miniproject1.config\
-.ebignore\
-.flaskenv\
-.gitignore\
-app/\
-    __init__.py\
-    __pycache__/\
-    middleware.py\
-    routes.py\
-    static/\
-        __target__/\
-            copy.js\
-            library.js\
-            library.project\
-            math.js\
-            org.transcrypt.__runtime__.js\
-            random.js\
-        library.py\
-    templates/\
-        index.html\
-application.py\
-DeployEB.md\
-Pipfile\
-Pipfile.lock\
-runflaskvoc.sh\
-
 ## Step-by-Step Installation  
 
 ### Clone the Repository  
@@ -73,9 +44,9 @@ runflaskvoc.sh\
 
 ### Run the Web App  
 
-1. Navigate to the root folder:  
+1. Navigate to the project folder:  
    ```bash  
-   cd ~/Downloads/d2w_mini_projects/mp_sort  
+   cd webapp 
    ```  
 2. Start the Flask application:  
    ```bash  
