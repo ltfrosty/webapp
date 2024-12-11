@@ -44,9 +44,9 @@ This project is a web application that predicts agricultural yield based on vari
 
 ### Run the Web App  
 
-1. Navigate to the root folder:  
+1. Navigate to the project folder:  
    ```bash  
-   cd ~/Downloads/d2w_mini_projects/mp_sort  
+   cd webapp 
    ```  
 2. Start the Flask application:  
    ```bash  
